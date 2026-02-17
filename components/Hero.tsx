@@ -1,89 +1,98 @@
 import React from 'react';
-import { HERO_VARIANTS, COMPANY_INFO } from '../constants';
+import { HERO_VARIANTS } from '../constants';
 import { Button } from './Button';
-import { MessageCircle, MapPin, CheckCircle2, ChevronRight } from 'lucide-react';
+import { MessageCircle, HardHat, ShieldCheck, Trophy, Package, Home, Handshake } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const content = HERO_VARIANTS.benefit;
 
-  const scrollToForm = () => {
-    const el = document.getElementById('contato');
-    el?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const checklistItems = [
+    { icon: Trophy, text: "+10 anos de mercado" },
+    { icon: Package, text: "+10.000 itens disponíveis" },
+    { icon: Home, text: "Casa, obra e indústria" },
+    { icon: Handshake, text: "Atendimento especializado" },
+  ];
 
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden bg-brand-dark">
-      {/* Background Image with Strong Dark Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" 
-          alt="Loja de materiais de construção e ferramentas" 
-          className="w-full h-full object-cover scale-105"
-        />
-        {/* Heavy Industrial Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/95 to-brand-dark/40"></div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-16">
-        <div className="lg:w-3/4">
-          {/* Badge */}
-          <div className="inline-flex flex-wrap gap-2 mb-8">
-             <div className="inline-flex items-center bg-brand-orange text-white px-4 py-1.5 rounded text-xs font-bold tracking-widest uppercase shadow-lg shadow-orange-900/50">
-              <CheckCircle2 className="w-3 h-3 mr-2" />
-              +{COMPANY_INFO.yearsInBusiness} Anos de Excelência
-            </div>
-            <div className="inline-flex items-center border border-white/20 rounded px-4 py-1.5 text-xs font-bold text-gray-300 tracking-widest uppercase bg-black/30 backdrop-blur-sm">
-              <MapPin className="w-3 h-3 text-brand-orange mr-2" />
-              Santo Amaro - SP
-            </div>
-          </div>
-
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] mb-6 uppercase tracking-tight">
-            Tudo para <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-orange-500">Casa</span>,<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-orange-500">Obra</span> e Manutenção
-          </h1>
+    <section className="relative min-h-[80vh] flex items-center pt-32 lg:pt-36 pb-16 overflow-hidden bg-white">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
           
-          <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl leading-relaxed font-light border-l-4 border-brand-orange pl-6">
-            {content.subhead}
-          </p>
+          {/* Coluna Texto - Foco em Conversão e Equilíbrio */}
+          <div className="lg:col-span-7 flex flex-col items-start z-20">
+            <div className="flex items-center gap-2 mb-6 bg-brand-black text-brand-green px-3 py-1.5 border-l-4 border-brand-green shadow-sm">
+              <HardHat size={18} />
+              <span className="font-black uppercase text-[10px] tracking-[0.2em]">
+                Santo Amaro • Varejo Técnico
+              </span>
+            </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button 
-              variant="primary" 
-              isWhatsApp 
-              icon={<MessageCircle className="w-5 h-5" />}
-              className="w-full sm:w-auto text-base px-8 py-4 uppercase tracking-wider"
-            >
-              Orçamento no WhatsApp
-            </Button>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-[900] text-brand-black leading-[1.1] mb-6 uppercase tracking-tighter">
+              Tudo para sua <span className="brush-highlight px-2 text-brand-black">casa</span>, obra e manutenção.
+            </h1>
             
-            <Button 
-              variant="outline" 
-              onClick={scrollToForm}
-              className="w-full sm:w-auto border-white text-white hover:bg-white hover:text-brand-dark uppercase tracking-wider text-base"
-              icon={<ChevronRight className="w-5 h-5" />}
-            >
-              Nossos Produtos
-            </Button>
+            <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg font-bold leading-tight border-l-8 border-brand-black pl-6 italic">
+              {content.subhead}
+            </p>
+
+            {/* Checklist de Autoridade */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 mb-10 w-full">
+              {checklistItems.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-3 group">
+                  <div className="bg-brand-green/10 p-2 rounded-sm group-hover:bg-brand-green transition-colors">
+                    <item.icon size={18} className="text-brand-black" />
+                  </div>
+                  <span className="text-[11px] font-[900] uppercase tracking-wider text-brand-black">
+                    {item.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
+              <Button 
+                variant="primary" 
+                isWhatsApp 
+                icon={<MessageCircle className="w-6 h-6" />}
+                className="w-full sm:w-auto px-8 py-5 text-lg border-2 border-brand-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
+              >
+                Cotação WhatsApp
+              </Button>
+              
+              <div className="flex items-center gap-3 px-6 py-4 border-2 border-dashed border-gray-300 bg-gray-50">
+                <ShieldCheck className="text-brand-green" size={24} />
+                <div>
+                  <p className="text-[9px] font-black uppercase text-gray-400 tracking-widest leading-none mb-1">Procedência</p>
+                  <p className="text-xs font-bold uppercase text-brand-black leading-none">Marcas Líderes</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Stats/Footer of Hero */}
-          <div className="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div>
-               <h4 className="text-2xl font-black text-white">10k+</h4>
-               <p className="text-xs text-gray-500 uppercase font-bold tracking-widest">Itens em Estoque</p>
-            </div>
-            <div>
-               <h4 className="text-2xl font-black text-white">1h</h4>
-               <p className="text-xs text-gray-500 uppercase font-bold tracking-widest">Entrega Expressa</p>
-            </div>
-            <div>
-               <h4 className="text-2xl font-black text-white">2</h4>
-               <p className="text-xs text-gray-500 uppercase font-bold tracking-widest">Lojas Físicas</p>
+          {/* Coluna Imagem - Escala Realista */}
+          <div className="lg:col-span-5 relative mt-12 lg:mt-0 flex items-center">
+            <div className="relative w-full">
+              <div className="border-4 border-brand-black p-1 bg-white shadow-[12px_12px_0px_0px_rgba(135,212,75,1)]">
+                <div className="aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?q=80&w=2070&auto=format&fit=crop" 
+                    alt="Materiais de Construção Silvas" 
+                    className="w-full h-full object-cover grayscale brightness-95 contrast-110 hover:grayscale-0 transition-all duration-700"
+                  />
+                </div>
+              </div>
+              
+              <div className="absolute -bottom-4 -left-4 bg-brand-black text-white p-4 border-2 border-brand-green shadow-xl z-20">
+                 <h4 className="text-2xl font-[900] leading-none mb-1">+{HERO_VARIANTS.benefit.headline.includes('10.000') ? '10K' : '10K'}</h4>
+                 <p className="text-[8px] font-black uppercase tracking-[0.2em] text-brand-green">Itens em Estoque</p>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
+
+      <div className="absolute top-0 right-0 w-1/4 h-full bg-brand-gray/5 -z-10 translate-x-1/2 -skew-x-12"></div>
     </section>
   );
 };

@@ -17,12 +17,12 @@ export const Button: React.FC<ButtonProps> = ({
   isWhatsApp = false,
   ...props 
 }) => {
-  const baseStyles = "inline-flex items-center justify-center font-bold transition-all duration-300 rounded px-6 py-3 shadow-lg hover:shadow-xl transform hover:-translate-y-1";
+  const baseStyles = "inline-flex items-center justify-center font-[900] uppercase tracking-tighter transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]";
   
   const variants = {
-    primary: "bg-brand-orange text-white hover:bg-orange-600 border border-transparent",
-    secondary: "bg-[#25D366] text-white hover:bg-green-600 border border-transparent",
-    outline: "bg-transparent text-white border-2 border-white/20 hover:border-white hover:bg-white hover:text-brand-dark"
+    primary: "bg-brand-green text-brand-black hover:bg-brand-black hover:text-brand-green border-brand-black",
+    secondary: "bg-brand-black text-brand-green hover:bg-brand-green hover:text-brand-black border-brand-black",
+    outline: "bg-transparent text-brand-black border-brand-black hover:bg-brand-black hover:text-white"
   };
 
   const widthClass = fullWidth ? "w-full" : "";
@@ -40,7 +40,7 @@ export const Button: React.FC<ButtonProps> = ({
       onClick={handleClick}
       {...props}
     >
-      {icon && <span className="mr-2">{icon}</span>}
+      {icon && <span className="mr-3">{icon}</span>}
       {children}
     </button>
   );

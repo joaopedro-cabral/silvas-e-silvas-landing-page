@@ -1,41 +1,42 @@
 import React from 'react';
 import { CATEGORIES } from '../constants';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Hammer } from 'lucide-react';
 
 export const Categories: React.FC = () => {
   return (
-    <section id="categorias" className="py-20 bg-brand-dark">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-            <div>
-                <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-2">
-                Categorias de <span className="text-brand-orange">Produtos</span>
-                </h2>
-                <div className="h-1 w-20 bg-brand-orange"></div>
+    <section id="categorias" className="py-24 bg-brand-black text-white relative border-y-8 border-brand-green">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div className="max-w-xl">
+            <div className="flex items-center space-x-2 mb-3 text-brand-green">
+              <Hammer size={20} />
+              <span className="font-black uppercase tracking-[0.3em] text-[10px]">Catálogo Técnico</span>
             </div>
-            <p className="text-gray-400 max-w-md text-right hidden md:block">
-                Encontre tudo o que sua obra precisa em um só lugar. Variedade e qualidade técnica.
-            </p>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-[900] uppercase tracking-tighter leading-tight">
+              Tudo o que você <br /><span className="text-brand-green">precisa</span>.
+            </h2>
+          </div>
+          <div className="hidden md:block h-1 w-24 bg-brand-green mb-3"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {CATEGORIES.map((cat) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-2 border-white/20">
+          {CATEGORIES.map((cat, idx) => (
             <div 
               key={cat.id} 
-              className="bg-brand-card border border-white/5 p-6 hover:border-brand-orange/50 transition-all duration-300 group cursor-pointer relative overflow-hidden"
+              className={`p-8 hover:bg-brand-green hover:text-brand-black transition-all duration-300 group cursor-pointer border-white/10 border-b-2 md:border-b-2 ${idx % 3 !== 2 ? 'lg:border-r-2' : ''} ${idx < 3 ? 'lg:border-b-2' : ''} last:border-b-0`}
             >
-              <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <ArrowRight className="w-5 h-5 text-brand-orange" />
+              <div className="w-12 h-12 bg-white/10 text-brand-green flex items-center justify-center mb-6 group-hover:bg-brand-black transition-all">
+                <cat.icon size={28} />
               </div>
               
-              <div className="w-14 h-14 bg-brand-dark rounded flex items-center justify-center mb-6 text-brand-orange border border-white/5 group-hover:bg-brand-orange group-hover:text-white transition-colors">
-                <cat.icon className="w-7 h-7" />
-              </div>
-              
-              <h3 className="font-bold text-white text-lg mb-2 uppercase tracking-wide group-hover:text-brand-orange transition-colors">{cat.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed group-hover:text-gray-300 transition-colors">
+              <h3 className="text-2xl font-[900] uppercase mb-3 tracking-tighter transition-transform group-hover:translate-x-1">{cat.title}</h3>
+              <p className="text-gray-400 font-bold mb-6 uppercase text-[10px] tracking-widest leading-relaxed group-hover:text-brand-black/80">
                 {cat.description}
               </p>
+              
+              <div className="inline-flex items-center border-b-2 border-brand-green py-1 font-black uppercase text-[10px] tracking-widest group-hover:border-brand-black transition-all">
+                Ver Estoque <ArrowRight className="ml-2 w-4 h-4" />
+              </div>
             </div>
           ))}
         </div>

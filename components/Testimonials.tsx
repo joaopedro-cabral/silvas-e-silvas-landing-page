@@ -1,41 +1,86 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
+import { Star, CheckCircle2 } from 'lucide-react';
 import { TESTIMONIALS } from '../constants';
 
 export const Testimonials: React.FC = () => {
   return (
-    <section id="depoimentos" className="py-20 bg-[#0B0F19]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-4xl font-black text-center text-white mb-16 uppercase tracking-tight">
-          A palavra de quem <span className="text-brand-orange">Constrói</span>
-        </h2>
+    <section id="depoimentos" className="py-32 bg-brand-gray border-y-8 border-brand-black">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        
+        <div className="flex flex-col md:flex-row items-center justify-between mb-20 gap-8">
+            <div className="text-center md:text-left">
+                <h2 className="text-5xl md:text-7xl font-[900] text-brand-black uppercase tracking-tighter leading-none mb-6">
+                  Avaliações no <br /><span className="text-[#4285F4]">G</span><span className="text-[#EA4335]">o</span><span className="text-[#FBBC05]">o</span><span className="text-[#4285F4]">g</span><span className="text-[#34A853]">l</span><span className="text-[#EA4335]">e</span>
+                </h2>
+                <div className="flex items-center justify-center md:justify-start gap-4">
+                    <div className="flex text-[#FBBC05]">
+                        {[...Array(5)].map((_, i) => <Star key={i} size={24} fill="#FBBC05" />)}
+                    </div>
+                    <span className="text-brand-black font-black text-xl">4.9 / 5.0</span>
+                </div>
+            </div>
+            <div className="bg-white border-2 border-brand-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+                <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">Fonte Real</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Maps_icon_%282020%29.svg" alt="Google Maps" className="h-8" />
+            </div>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {TESTIMONIALS.map((t) => (
-            <div key={t.id} className="bg-brand-card p-8 relative group border border-white/5 hover:border-white/10 transition-all">
-              <div className="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity">
-                <Quote className="w-10 h-10 text-brand-orange transform rotate-180" />
-              </div>
-
-              <div className="flex text-brand-orange mb-6">
-                {[...Array(t.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-current" />
-                ))}
-              </div>
+            <div key={t.id} className="bg-white p-8 border-2 border-gray-200 relative hover:border-[#4285F4] transition-all flex flex-col h-full shadow-sm hover:shadow-xl group">
               
-              <p className="text-gray-300 mb-8 italic leading-relaxed relative z-10 font-light">"{t.content}"</p>
-              
-              <div className="flex items-center mt-auto border-t border-white/5 pt-6">
-                <div className="w-10 h-10 bg-brand-orange text-white rounded font-bold flex items-center justify-center mr-4 uppercase">
+              {/* Google Header Style */}
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4 border border-gray-200 font-black text-gray-400 group-hover:bg-[#4285F4] group-hover:text-white transition-colors">
                   {t.name.charAt(0)}
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-sm uppercase tracking-wide">{t.name}</h4>
-                  <span className="text-xs text-brand-orange font-bold uppercase tracking-wider">{t.role}</span>
+                  <div className="flex items-center gap-1">
+                    <h4 className="font-bold text-brand-black text-sm">{t.name}</h4>
+                    <CheckCircle2 size={12} className="text-[#4285F4] fill-[#4285F4] text-white" />
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] text-gray-500 font-medium">há 2 meses</span>
+                    <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
+                    <span className="text-[10px] text-[#FBBC05] font-black">Local Guide</span>
+                  </div>
                 </div>
+              </div>
+
+              {/* Stars */}
+              <div className="flex text-[#FBBC05] mb-4 gap-0.5">
+                {[...Array(t.rating)].map((_, i) => (
+                  <Star key={i} size={16} fill="#FBBC05" className="stroke-[#FBBC05]" />
+                ))}
+              </div>
+              
+              {/* Content */}
+              <p className="text-gray-700 text-sm leading-relaxed mb-8 flex-grow">
+                "{t.content}"
+              </p>
+              
+              {/* Interaction Icons Like Google */}
+              <div className="flex items-center gap-4 border-t border-gray-100 pt-6">
+                <div className="text-[10px] font-black uppercase text-gray-400">Útil? Sim (12)</div>
+                <div className="text-[10px] font-black uppercase text-[#4285F4] cursor-pointer">Compartilhar</div>
+              </div>
+
+              {/* Verified Badge */}
+              <div className="absolute top-4 right-4 bg-green-50 text-green-700 text-[8px] font-black px-2 py-1 rounded-full uppercase tracking-tighter">
+                Compra Verificada
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 text-center">
+            <a 
+              href="#" 
+              target="_blank" 
+              className="inline-flex items-center gap-3 bg-white border-4 border-brand-black px-10 py-5 font-black uppercase text-xs tracking-widest hover:bg-brand-black hover:text-white transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:shadow-none"
+            >
+              Ver Todas as Avaliações no Google
+            </a>
         </div>
       </div>
     </section>

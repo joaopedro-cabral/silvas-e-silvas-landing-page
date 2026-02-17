@@ -1,68 +1,53 @@
 import React from 'react';
 import { COMPANY_INFO } from '../constants';
-import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-black text-white pt-16 pb-8 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Brand */}
-          <div>
-            <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-tighter">
-              Silvas <span className="text-brand-orange">&</span> Silvas
-            </h3>
-            <p className="text-gray-500 text-sm leading-relaxed mb-6 font-light">
-              Desde 2014 sendo a referência em materiais de construção e ferramentas em Santo Amaro. Qualidade técnica e compromisso com sua obra.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-500 hover:text-brand-orange transition-colors"><Instagram className="w-6 h-6" /></a>
-              <a href="#" className="text-gray-500 hover:text-brand-orange transition-colors"><Facebook className="w-6 h-6" /></a>
+    <footer className="bg-brand-black py-16 border-t-8 border-brand-green">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-12">
+          
+          <div className="max-w-md">
+            <div className="brush-highlight px-6 py-1.5 mb-6 bg-brand-green">
+                <span className="text-3xl font-[900] text-brand-black uppercase tracking-tighter block leading-none">
+                Silvas <span className="text-white">&</span> Silvas
+                </span>
             </div>
+            <p className="text-gray-400 font-bold uppercase text-[10px] tracking-widest leading-relaxed mb-8">
+                Referência em Santo Amaro para materiais elétricos, hidráulicos e ferramentas. Atendimento técnico especializado.
+            </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6">Navegação</h4>
-            <ul className="space-y-3 text-gray-400 text-sm font-medium">
-              <li><a href="#beneficios" className="hover:text-white transition-colors">A Empresa</a></li>
-              <li><a href="#produtos" className="hover:text-white transition-colors">Produtos</a></li>
-              <li><a href="#depoimentos" className="hover:text-white transition-colors">Clientes</a></li>
-              <li><a href="#contato" className="hover:text-white transition-colors">Fale Conosco</a></li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div id="localizacao">
-            <h4 className="text-sm font-bold uppercase tracking-widest text-gray-500 mb-6">Atendimento</h4>
-            <ul className="space-y-4 text-gray-400 text-sm">
-              <li className="flex items-start">
-                <MapPin className="w-5 h-5 mr-3 text-brand-orange flex-shrink-0 mt-0.5" />
-                <a 
-                  href={COMPANY_INFO.mapLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition-colors leading-snug"
-                >
-                  {COMPANY_INFO.address}
-                </a>
-              </li>
-              <li className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-brand-orange flex-shrink-0" />
-                <a href={`tel:${COMPANY_INFO.phone.replace(/\D/g,'')}`} className="hover:text-white transition-colors">
-                  {COMPANY_INFO.phone}
-                </a>
-              </li>
-              <li className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-brand-orange flex-shrink-0" />
-                <span>contato@silvasesilvas.com.br</span>
-              </li>
-            </ul>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-12">
+             <div>
+                <h5 className="text-brand-green font-black uppercase text-[10px] tracking-widest mb-6 text-opacity-80">Navegação</h5>
+                <ul className="space-y-3">
+                   {['Sobre', 'Categorias', 'Depoimentos'].map(item => (
+                     <li key={item}><a href={`#${item.toLowerCase()}`} className="text-white/40 hover:text-brand-green text-[10px] font-black uppercase tracking-tight transition-colors">{item}</a></li>
+                   ))}
+                </ul>
+             </div>
+             <div>
+                <h5 className="text-brand-green font-black uppercase text-[10px] tracking-widest mb-6 text-opacity-80">Contato</h5>
+                <ul className="space-y-3">
+                   <li className="text-white/40 text-[10px] font-black uppercase tracking-tight">{COMPANY_INFO.phone}</li>
+                   <li className="text-white/40 text-[10px] font-black uppercase tracking-tight">vendas@silvas.com.br</li>
+                </ul>
+             </div>
           </div>
         </div>
 
-        <div className="border-t border-white/5 pt-8 text-center text-xs text-gray-600 uppercase tracking-widest">
-          <p>&copy; {new Date().getFullYear()} Silvas e Silvas Materiais. Todos os direitos reservados.</p>
+        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex gap-3">
+               {['Instagram', 'Facebook'].map(social => (
+                 <a key={social} href="#" className="bg-white/5 p-2.5 text-white/30 hover:bg-brand-green hover:text-brand-black transition-all border border-white/5">
+                    <span className="text-[9px] font-black uppercase tracking-widest">{social}</span>
+                 </a>
+               ))}
+            </div>
+            <p className="text-[8px] font-black uppercase tracking-[0.3em] text-white/10 text-center">
+               &copy; {new Date().getFullYear()} Silvas & Silvas - Todos os direitos reservados
+            </p>
         </div>
       </div>
     </footer>

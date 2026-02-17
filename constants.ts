@@ -12,10 +12,9 @@ export const COMPANY_INFO = {
 };
 
 export const HERO_VARIANTS = {
-  // Option 3: Benefit/Result (Hybrid with Client Request)
   benefit: {
-    headline: "Tudo para Casa, Obra e Manutenção em Santo Amaro",
-    subhead: "Há mais de 10 anos oferecendo variedade, qualidade e confiança. Mais de 10.000 itens com entrega rápida ou retirada na loja."
+    headline: "Tudo para sua casa, obra e manutenção em um só lugar",
+    subhead: "Há mais de 10 anos oferecendo variedade, qualidade e confiança em Santo Amaro."
   }
 };
 
@@ -69,7 +68,7 @@ export const BENEFITS: Benefit[] = [
     id: 3,
     title: "Atendimento Especializado",
     description: "Nossa equipe técnica entende de obra e ajuda você a escolher o produto certo.",
-    icon: Clock // Using Clock as a placeholder, contextually implies saving time via expertise
+    icon: Clock
   }
 ];
 

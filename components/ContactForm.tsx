@@ -4,98 +4,57 @@ import { COMPANY_INFO } from '../constants';
 
 export const ContactForm: React.FC = () => {
   return (
-    <section id="contato" className="py-20 bg-[#0F141E] relative overflow-hidden border-t border-brand-orange/20">
+    <section id="contato" className="py-24 bg-brand-black text-white relative border-t-[16px] border-brand-green">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left Side: Contact Info */}
-            <div className="order-2 lg:order-1">
-                <div className="inline-block px-3 py-1 bg-brand-orange/10 border border-brand-orange/20 text-brand-orange text-xs font-bold uppercase tracking-widest mb-6">
-                    Localização e Contato
-                </div>
-                <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight uppercase">
-                    Visite nossa <br/><span className="text-brand-orange">Loja Física</span>
+        <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+            
+            <div className="flex flex-col justify-center">
+                <h2 className="text-6xl md:text-8xl font-[900] uppercase tracking-tighter leading-[0.85] mb-12">
+                  Visite <br />Nossa <br /><span className="text-brand-green">Loja</span>
                 </h2>
-                <p className="text-lg text-gray-400 mb-8 leading-relaxed font-light">
-                    Estamos localizados estrategicamente no coração de Santo Amaro. Estacionamento fácil e cafézinho quente esperando por você.
-                </p>
 
-                <div className="space-y-8 mb-10">
-                    <div className="flex items-start group">
-                        <div className="w-12 h-12 bg-brand-card border border-white/10 flex items-center justify-center flex-shrink-0 mr-4 group-hover:border-brand-orange transition-colors">
-                            <MapPin className="w-5 h-5 text-white" />
-                        </div>
+                <div className="space-y-6 mb-16">
+                    <div className="flex items-center bg-white/5 border-l-8 border-brand-green p-6 group hover:bg-white/10 transition-colors">
+                        <MapPin size={32} className="text-brand-green mr-6 flex-shrink-0" />
                         <div>
-                            <h4 className="font-bold text-white text-lg uppercase">Endereço</h4>
-                            <p className="text-gray-400 leading-snug">{COMPANY_INFO.address}</p>
+                            <p className="text-brand-green font-black uppercase text-[10px] tracking-widest mb-1">Endereço</p>
+                            <h4 className="font-black uppercase text-sm md:text-base leading-tight">{COMPANY_INFO.address}</h4>
                         </div>
                     </div>
                     
-                     <div className="flex items-start group">
-                        <div className="w-12 h-12 bg-brand-card border border-white/10 flex items-center justify-center flex-shrink-0 mr-4 group-hover:border-brand-orange transition-colors">
-                            <Clock className="w-5 h-5 text-white" />
-                        </div>
+                    <div className="flex items-center bg-white/5 border-l-8 border-brand-green p-6 group hover:bg-white/10 transition-colors">
+                        <Phone size={32} className="text-brand-green mr-6 flex-shrink-0" />
                         <div>
-                            <h4 className="font-bold text-white text-lg uppercase">Horário</h4>
-                            <p className="text-gray-400">Seg a Sex: 07:00 - 18:00</p>
-                            <p className="text-gray-400">Sábado: 07:00 - 13:00</p>
-                        </div>
-                    </div>
-
-                     <div className="flex items-start group">
-                        <div className="w-12 h-12 bg-brand-card border border-white/10 flex items-center justify-center flex-shrink-0 mr-4 group-hover:border-brand-orange transition-colors">
-                            <Phone className="w-5 h-5 text-white" />
-                        </div>
-                        <div>
-                            <h4 className="font-bold text-white text-lg uppercase">Televendas</h4>
-                            <p className="text-gray-400">{COMPANY_INFO.phone}</p>
-                            <p className="text-gray-500 text-sm">vendas@silvasesilvas.com.br</p>
+                            <p className="text-brand-green font-black uppercase text-[10px] tracking-widest mb-1">Televendas</p>
+                            <h4 className="font-black uppercase text-xl">{COMPANY_INFO.phone}</h4>
                         </div>
                     </div>
                 </div>
 
                 <div className="flex flex-col gap-4">
                     <a 
-                        href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Olá, gostaria de saber mais sobre materiais.`}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="w-full bg-[#25D366] hover:bg-green-600 text-white px-6 py-4 rounded font-bold flex items-center justify-center transition-all shadow-lg uppercase tracking-wide text-lg"
+                        href={`https://wa.me/${COMPANY_INFO.whatsapp}`}
+                        className="flex items-center justify-center bg-brand-green text-brand-black py-8 text-3xl font-[900] uppercase hover:bg-white transition-all border-b-8 border-green-700 active:translate-y-1 active:border-b-0"
                     >
-                        <MessageCircle className="w-6 h-6 mr-3" />
-                        Chamar no WhatsApp
+                        <MessageCircle className="mr-4 w-10 h-10" />
+                        WhatsApp Agora
                     </a>
-                    
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <a 
-                            href={`tel:${COMPANY_INFO.phone.replace(/\D/g,'')}`}
-                            className="flex-1 bg-brand-card border border-white/10 hover:border-white text-white px-6 py-3 rounded font-bold flex items-center justify-center transition-all uppercase text-sm"
-                        >
-                            <Phone className="w-4 h-4 mr-2" />
-                            Ligar Agora
-                        </a>
-                        <a 
-                            href={COMPANY_INFO.mapLink}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="flex-1 bg-brand-orange hover:bg-orange-600 text-white px-6 py-3 rounded font-bold flex items-center justify-center transition-all shadow-lg uppercase text-sm"
-                        >
-                            <Navigation className="w-4 h-4 mr-2" />
-                            Traçar Rota
-                        </a>
+                    <div className="grid grid-cols-2 gap-4">
+                        <a href={`tel:${COMPANY_INFO.phone}`} className="bg-white text-brand-black py-5 font-black uppercase text-center text-sm hover:bg-brand-green transition-colors">Ligar para Loja</a>
+                        <a href={COMPANY_INFO.mapLink} target="_blank" rel="noreferrer" className="bg-brand-gray/10 text-white py-5 font-black uppercase text-center text-sm border-2 border-white/20 hover:bg-white hover:text-brand-black transition-all">Como Chegar</a>
                     </div>
                 </div>
             </div>
 
-            {/* Right Side: Map */}
-            <div className="order-1 lg:order-2 h-[400px] lg:h-[600px] bg-brand-card rounded overflow-hidden shadow-2xl border border-white/10 relative group">
-                 <iframe 
+            <div className="h-[400px] lg:h-auto border-[12px] border-brand-green shadow-[20px_20px_0px_0px_rgba(255,255,255,0.1)]">
+                <iframe 
                     width="100%" 
                     height="100%" 
-                    style={{ border: 0 }} 
+                    style={{ border: 0, filter: 'grayscale(1) contrast(1.5) invert(0.1)' }} 
                     loading="lazy" 
                     allowFullScreen 
                     src={`https://maps.google.com/maps?q=${encodeURIComponent(COMPANY_INFO.address)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                     title="Mapa de Localização"
-                    className="absolute inset-0 w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700 opacity-80 group-hover:opacity-100"
                 ></iframe>
             </div>
         </div>
