@@ -3,6 +3,22 @@ import { CATEGORIES } from '../constants';
 import { ArrowRight, Hammer } from 'lucide-react';
 
 export const Categories: React.FC = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contato');
+    if (element) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="categorias" className="py-24 bg-brand-black text-white relative border-y-8 border-brand-green">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
@@ -23,6 +39,7 @@ export const Categories: React.FC = () => {
           {CATEGORIES.map((cat, idx) => (
             <div 
               key={cat.id} 
+              onClick={scrollToContact}
               className={`p-8 hover:bg-brand-green hover:text-brand-black transition-all duration-300 group cursor-pointer border-white/10 border-b-2 md:border-b-2 ${idx % 3 !== 2 ? 'lg:border-r-2' : ''} ${idx < 3 ? 'lg:border-b-2' : ''} last:border-b-0`}
             >
               <div className="w-12 h-12 bg-white/10 text-brand-green flex items-center justify-center mb-6 group-hover:bg-brand-black transition-all">
@@ -34,9 +51,11 @@ export const Categories: React.FC = () => {
                 {cat.description}
               </p>
               
-              <div className="inline-flex items-center border-b-2 border-brand-green py-1 font-black uppercase text-[10px] tracking-widest group-hover:border-brand-black transition-all">
+              <button 
+                className="inline-flex items-center border-b-2 border-brand-green py-1 font-black uppercase text-[10px] tracking-widest group-hover:border-brand-black transition-all outline-none"
+              >
                 Ver Estoque <ArrowRight className="ml-2 w-4 h-4" />
-              </div>
+              </button>
             </div>
           ))}
         </div>

@@ -3,13 +3,28 @@ import { Benefit, FaqItem, Testimonial } from "./types";
 
 export const COMPANY_INFO = {
   name: "Silvas e Silvas",
-  phone: "(11) 99999-9999",
+  phone: "(11) 5521-1234",
   whatsapp: "5511999999999",
-  address: "Av. Santo Amaro, 1234 - Santo Amaro, São Paulo - SP",
-  mapLink: "https://maps.google.com/?q=Silvas+e+Silvas+Santo+Amaro",
   yearsInBusiness: 10,
   productsCount: "10.000"
 };
+
+export const STORES = [
+  {
+    id: 1,
+    name: "Loja 01 - Cerqueira César",
+    address: "R. Cerqueira César, 31 - Santo Amaro, São Paulo - SP, 04750-080",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=R.+Cerqueira+César,+31+-+Santo+Amaro,+São+Paulo+-+SP,+04750-080",
+    embedMap: "https://maps.google.com/maps?q=R.%20Cerqueira%20César,%2031%20-%20Santo%20Amaro&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  },
+  {
+    id: 2,
+    name: "Loja 02 - Bandeira de Mello",
+    address: "Rua Desembargador Bandeira de Mello, 94 - Santo Amaro, São Paulo - SP, 04743-000",
+    mapLink: "https://www.google.com/maps/search/?api=1&query=Rua+Desembargador+Bandeira+de+Mello,+94+-+Santo+Amaro,+São+Paulo+-+SP,+04743-000",
+    embedMap: "https://maps.google.com/maps?q=Rua%20Desembargador%20Bandeira%20de%20Mello,%2094%20-%20Santo%20Amaro&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  }
+];
 
 export const HERO_VARIANTS = {
   benefit: {
@@ -107,7 +122,7 @@ export const FAQS: FaqItem[] = [
   },
   {
     question: "Posso retirar na loja?",
-    answer: "Sim! Temos loja física em Santo Amaro. Você pode comprar pelo WhatsApp e retirar no balcão."
+    answer: "Sim! Temos duas lojas em Santo Amaro. Você pode comprar pelo WhatsApp e retirar no balcão da unidade de sua preferência."
   },
   {
     question: "Vocês vendem materiais básicos (areia/pedra)?",
