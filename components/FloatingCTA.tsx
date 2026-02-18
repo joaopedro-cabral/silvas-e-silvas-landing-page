@@ -30,7 +30,7 @@ export const FloatingCTA: React.FC = () => {
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-all duration-300 hover:scale-110 flex items-center gap-2 group animate-bounce-subtle"
       aria-label="Falar no WhatsApp"
     >
-      <img src="/img/whatsapp-icon.webp" className="md:w-10 md:h-10" alt="" />
+      <img src="/img/whatsapp-icon.webp" className="h-auto w-10 md:h-10" alt="" />
       <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 whitespace-nowrap font-bold">
         Orçamento Rápido
       </span>

@@ -55,7 +55,7 @@ export const Hero: React.FC = () => {
                 isWhatsApp 
                 className="w-full sm:w-auto px-8 py-5 gap-3 text-lg border-2 border-brand-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
               >
-                <img src="/img/whatsapp-icon.webp" className="md:w-10 md:h-10" alt="" />
+                <img src="/img/whatsapp-icon.webp" className="h-auto w-10 md:h-10" alt="" />
                 Cotação WhatsApp
               </Button>
               
