@@ -6,7 +6,7 @@ const BRAND_LOGOS = [
   { name: "Lorenzetti", url: "/img/lorenzetti-logo.png" },
   { name: "Bosch", url: "/img/bosch-logo.png" },
   { name: "Amanco", url: "/img/amanco-wavin-logo-1.png" },
-  { name: "Gerdau", url: "/img/gerdau-logo.png" }
+  { name: "Gerdau", url: "/img/Gerdau-logo.png" }
 ];
 
 export const Brands: React.FC = () => {
