@@ -53,9 +53,9 @@ export const Hero: React.FC = () => {
               <Button 
                 variant="primary" 
                 isWhatsApp 
-                icon={<MessageCircle className="w-6 h-6" />}
-                className="w-full sm:w-auto px-8 py-5 text-lg border-2 border-brand-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
+                className="w-full sm:w-auto px-8 py-5 gap-3 text-lg border-2 border-brand-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-none transition-all"
               >
+                <img src="/img/whatsapp-icon.webp" className="md:w-10 md:h-10" alt="" />
                 Cotação WhatsApp
               </Button>
               
@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
               <div className="border-4 border-brand-black p-1 bg-white shadow-[12px_12px_0px_0px_rgba(135,212,75,1)]">
                 <div className="aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1513467535987-fd81bc7d62f8?q=80&w=2070&auto=format&fit=crop" 
+                    src="/public/img/loja-materiais-construcao_(19).jpeg" 
                     alt="Materiais de Construção Silvas" 
                     className="w-full h-full object-cover grayscale brightness-95 contrast-110 hover:grayscale-0 transition-all duration-700"
                   />

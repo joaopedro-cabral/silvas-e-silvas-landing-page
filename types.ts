@@ -3,7 +3,7 @@ import { LucideIcon } from "lucide-react";
 export interface Testimonial {
   id: number;
   name: string;
-  role: string;
+  profile: string;
   content: string;
   rating: number;
 }

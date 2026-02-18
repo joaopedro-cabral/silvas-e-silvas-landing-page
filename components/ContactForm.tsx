@@ -79,12 +79,12 @@ export const ContactForm: React.FC = () => {
 
             {/* Botão de WhatsApp Principal */}
             <a 
-                href={`https://wa.me/${COMPANY_INFO.whatsapp}`}
+                href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Olá, estou no site e preciso de materiais.`}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-center bg-brand-green text-brand-black py-8 px-4 text-2xl md:text-3xl font-[900] uppercase hover:bg-white transition-all border-b-8 border-green-700 active:translate-y-1 active:border-b-0 shadow-2xl text-center"
+                className="flex items-center justify-center gap-3 bg-brand-green text-brand-black py-8 px-4 text-2xl md:text-3xl font-[900] uppercase hover:bg-white transition-all border-b-8 border-green-700 active:translate-y-1 active:border-b-0 shadow-2xl text-center"
             >
-                <MessageCircle className="mr-4 w-10 h-10" />
+                <img src="/img/whatsapp-icon.webp" className="md:w-10 md:h-10" alt="" />
                 Falar com Vendedor agora
             </a>
             <p className="text-center mt-6 text-gray-500 font-black uppercase text-[10px] tracking-[0.3em]">

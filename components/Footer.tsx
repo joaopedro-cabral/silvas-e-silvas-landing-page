@@ -31,20 +31,12 @@ export const Footer: React.FC = () => {
                 <h5 className="text-brand-green font-black uppercase text-[10px] tracking-widest mb-6 text-opacity-80">Contato</h5>
                 <ul className="space-y-3">
                    <li className="text-white/40 text-[10px] font-black uppercase tracking-tight">{COMPANY_INFO.phone}</li>
-                   <li className="text-white/40 text-[10px] font-black uppercase tracking-tight">vendas@silvas.com.br</li>
                 </ul>
              </div>
           </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex gap-3">
-               {['Instagram', 'Facebook'].map(social => (
-                 <a key={social} href="#" className="bg-white/5 p-2.5 text-white/30 hover:bg-brand-green hover:text-brand-black transition-all border border-white/5">
-                    <span className="text-[9px] font-black uppercase tracking-widest">{social}</span>
-                 </a>
-               ))}
-            </div>
             <p className="text-[8px] font-black uppercase tracking-[0.3em] text-white/10 text-center">
                &copy; {new Date().getFullYear()} Silvas & Silvas - Todos os direitos reservados
             </p>

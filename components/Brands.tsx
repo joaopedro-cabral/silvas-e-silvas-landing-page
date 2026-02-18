@@ -1,12 +1,12 @@
 import React from 'react';
 
 const BRAND_LOGOS = [
-  { name: "Tramontina", url: "https://logodownload.org/wp-content/uploads/2018/07/tramontina-logo-0.png" },
-  { name: "Tigre", url: "https://logodownload.org/wp-content/uploads/2017/10/tigre-logo-2.png" },
-  { name: "Lorenzetti", url: "https://logodownload.org/wp-content/uploads/2018/10/lorenzetti-logo-0.png" },
-  { name: "Bosch", url: "https://logodownload.org/wp-content/uploads/2014/04/bosch-logo-0.png" },
-  { name: "Amanco", url: "https://logodownload.org/wp-content/uploads/2018/10/amanco-logo-0.png" },
-  { name: "Gerdau", url: "https://logodownload.org/wp-content/uploads/2014/10/gerdau-logo-0.png" }
+  { name: "Tramontina", url: "/public/img/tramontina-seeklogo.png" },
+  { name: "Tigre", url: "/public/img/tigre-logo.png" },
+  { name: "Lorenzetti", url: "/public/img/lorenzetti-logo.png" },
+  { name: "Bosch", url: "/public/img/bosch-logo.png" },
+  { name: "Amanco", url: "/public/img/amanco-wavin-logo-1.png" },
+  { name: "Gerdau", url: "/public/img/gerdau-logo.png" }
 ];
 
 export const Brands: React.FC = () => {
