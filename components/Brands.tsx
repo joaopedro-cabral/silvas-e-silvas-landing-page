@@ -1,12 +1,12 @@
 import React from 'react';
 
 const BRAND_LOGOS = [
-  { name: "Tramontina", url: "/public/img/tramontina-seeklogo.png" },
-  { name: "Tigre", url: "/public/img/tigre-logo.png" },
-  { name: "Lorenzetti", url: "/public/img/lorenzetti-logo.png" },
-  { name: "Bosch", url: "/public/img/bosch-logo.png" },
-  { name: "Amanco", url: "/public/img/amanco-wavin-logo-1.png" },
-  { name: "Gerdau", url: "/public/img/gerdau-logo.png" }
+  { name: "Tramontina", url: "/img/tramontina-seeklogo.png" },
+  { name: "Tigre", url: "/img/tigre-logo.png" },
+  { name: "Lorenzetti", url: "/img/lorenzetti-logo.png" },
+  { name: "Bosch", url: "/img/bosch-logo.png" },
+  { name: "Amanco", url: "/img/amanco-wavin-logo-1.png" },
+  { name: "Gerdau", url: "/img/gerdau-logo.png" }
 ];
 
 export const Brands: React.FC = () => {

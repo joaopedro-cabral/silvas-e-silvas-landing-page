@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
               <div className="border-4 border-brand-black p-1 bg-white shadow-[12px_12px_0px_0px_rgba(135,212,75,1)]">
                 <div className="aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
                   <img 
-                    src="/public/img/loja-materiais-construcao_(19).jpeg" 
+                    src="/img/loja-materiais-construcao_(19).jpeg" 
                     alt="Materiais de Construção Silvas" 
                     className="w-full h-full object-cover grayscale brightness-95 contrast-110 hover:grayscale-0 transition-all duration-700"
                   />

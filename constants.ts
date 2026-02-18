@@ -91,21 +91,21 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
     name: "Vanderlei Silva de Souza",
-    profile: "/public/img/materiais-construcao-01.png",
+    profile: "/img/materiais-construcao-01.png",
     content: "Eu recomendo, ótimo atendimento, bom preço, produto de qualidade.",
     rating: 5
   },
   {
     id: 2,
     name: "Marcia Christina Machado",
-    profile: "/public/img/loja-construcao.png",
+    profile: "/img/loja-construcao.png",
     content: "Ótimo atendimento, grande variedade de produtos!",
     rating: 5
   },
   {
     id: 3,
     name: "Luciana Andrade",
-    profile: "/public/img/material-construcao.png",
+    profile: "/img/material-construcao.png",
     content: "Ótimo atendimento,bons descontos gente como a gente.",
     rating: 5
   }
