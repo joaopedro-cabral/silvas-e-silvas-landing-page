@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageCircle, Phone, MapPin, Navigation, Map as MapIcon } from 'lucide-react';
+import { MessageCircle, Phone, MapPin, Navigation, MessageCircleWarning, Map as MapIcon } from 'lucide-react';
 import { COMPANY_INFO, STORES } from '../constants';
 
 export const ContactForm: React.FC = () => {
@@ -22,27 +22,47 @@ export const ContactForm: React.FC = () => {
         {/* Grade de Endereços */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
             {STORES.map((store) => (
-              <div key={store.id} className="bg-white/5 border-2 border-white/10 p-8 hover:border-brand-green transition-all group">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-8 bg-brand-green text-brand-black flex items-center justify-center font-black text-xs">
-                    0{store.id}
-                  </div>
-                  <h3 className="text-xl font-[900] uppercase tracking-tighter">{store.name}</h3>
+              <div key={store.id} className="bg-white/5 border-2 border-white/10 p-8 hover:border-brand-green transition-all group flex flex-col sm:flex-row gap-6">
+                {/* Imagem da Fachada Menor */}
+                <div className="w-full sm:w-32 h-32 flex-shrink-0 overflow-hidden border-2 border-white/10 bg-brand-black">
+                  <img 
+                    src={(store as any).image} 
+                    alt={`Fachada ${store.name}`} 
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
-                
-                <p className="font-bold text-gray-400 leading-tight mb-6 text-sm">
-                  {store.address}
-                </p>
 
-                <a 
-                  href={store.mapLink} 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2 text-brand-green font-black uppercase text-[10px] tracking-widest hover:text-white transition-colors"
-                >
-                  <Navigation size={14} />
-                  Abrir no Google Maps
-                </a>
+                <div className="flex-grow">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-8 h-8 bg-brand-green text-brand-black flex items-center justify-center font-black text-xs">
+                      0{store.id}
+                    </div>
+                    <h3 className="text-xl font-[900] uppercase tracking-tighter">{store.name}</h3>
+                  </div>
+                  
+                  <p className="font-bold text-gray-400 leading-tight mb-4 text-sm">
+                    {store.address}
+                  </p>
+
+                  {(store as any).feature && (
+                    <div className="mb-6 bg-brand-green/10 border-l-4 border-brand-green p-3">
+                      <p className="text-[10px] font-black text-brand-green uppercase tracking-widest">
+                        {(store as any).feature}
+                      </p>
+                    </div>
+                  )}
+
+                  <a 
+                    href={store.mapLink} 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-brand-green font-black uppercase text-[10px] tracking-widest hover:text-white transition-colors"
+                  >
+                    <Navigation size={14} />
+                    Abrir no Google Maps
+                  </a>
+                </div>
               </div>
             ))}
         </div>
@@ -79,16 +99,17 @@ export const ContactForm: React.FC = () => {
 
             {/* Botão de WhatsApp Principal */}
             <a 
+                id="whatsapp-final"
                 href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Olá, estou no site e preciso de materiais.`}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center justify-center gap-3 bg-brand-green text-brand-black py-8 px-4 text-2xl md:text-3xl font-[900] uppercase hover:bg-white transition-all border-b-8 border-green-700 active:translate-y-1 active:border-b-0 shadow-2xl text-center"
             >
-                <img src="/img/whatsapp-icon.webp" className="h-auto w-10 md:h-10" alt="" />
+                <MessageCircleWarning size='40'></MessageCircleWarning>
                 Falar com Vendedor agora
             </a>
             <p className="text-center mt-6 text-gray-500 font-black uppercase text-[10px] tracking-[0.3em]">
-              Resposta imediata em horário comercial
+              RESPOSTA RÁPIDA EM HORÁRIO COMERCIAL.
             </p>
         </div>
       </div>

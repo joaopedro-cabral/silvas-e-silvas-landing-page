@@ -8,38 +8,83 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-            },
-            colors: {
-              brand: {
-                green: '#87D44B',
-                black: '#1A1A1A',
-                gray: '#F1F1F1',
-                white: '#FFFFFF'
-              }
-            }
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            green: '#87D44B',
+            black: '#1A1A1A',
+            navy: '#064e3b'
           }
         }
       }
+    }
+  }
     </script>
     <style>
+      /* TOKENS DE CORES - TEMA VERDE PREMIUM */
+      :root {
+        --green-900: #064e3b;
+        --green-800: #065f46;
+        --green-700: #047857;
+        --text-pure: #ffffff;
+        --text-soft: #ecfdf5;
+        --text-muted: #a7f3d0;
+        --brand-green: #87D44B;
+        --brand-black: #1A1A1A;
+      }
+
       body {
-        background-color: #FFFFFF;
-        color: #1A1A1A;
+        /* BACKGROUND MULTI-CAMADA (CSS ONLY) */
+        background-color: var(--green-900);
+        background-image: 
+          /* CAMADA 1: PONTINHOS (DOT PATTERN) */
+          radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.08) 1px, transparent 0),
+          /* CAMADA 2: GRID TÉCNICO / BLUEPRINT (LINHAS TÊNUES) */
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          /* CAMADA 3: GRADIENTE DE PROFUNDIDADE */
+          linear-gradient(135deg, var(--green-900) 0%, var(--green-800) 50%, var(--green-700) 100%);
+        
+        /* Ajuste de escala das texturas */
+        background-size: 24px 24px, 80px 80px, 80px 80px, 100% 100%;
+        color: var(--text-soft);
         font-family: 'Inter', sans-serif;
-        background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-        background-attachment: fixed;
+        margin: 0;
+        min-height: 100vh;
+      }
+
+      /* REMOÇÃO DE IMAGENS DE FUNDO EXISTENTES NOS COMPONENTES */
+      section div[class*="-z-"] img, 
+      section div[class*="-z-10"] img,
+      section div[class*="-z-20"] img {
+        display: none !important;
       }
       
+      section div[class*="bg-brand-gray"],
+      section div[class*="bg-brand-navy"],
+      section div[class*="bg-gradient-to-b"] {
+        background: transparent !important;
+      }
+
+      /* AJUSTES DE TIPOGRAFIA E CONTRASTE */
+      h1, h5, h6 {
+        color: var(--text-pure) !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      }
+
+      .text-gray-400, .text-gray-500, .text-gray-700, .text-gray-800 {
+        color: var(--text-muted) !important;
+      }
+
+      /* PRESERVAÇÃO DOS DESTAQUES VERDE/PRETO */
       .brush-highlight {
         position: relative;
         display: inline-block;
         z-index: 1;
       }
+      
       .brush-highlight::before {
         content: "";
         position: absolute;
@@ -47,21 +92,38 @@
         left: -4px;
         right: -4px;
         bottom: 5%;
-        background-color: #87D44B;
+        background-color: var(--brand-green) !important;
         z-index: -1;
         clip-path: polygon(0% 5%, 100% 0%, 98% 90%, 2% 100%);
-        opacity: 0.9;
+        opacity: 1;
       }
 
+      .bg-brand-black {
+        background-color: var(--brand-black) !important;
+      }
+
+      .text-brand-green {
+        color: var(--brand-green) !important;
+      }
+
+      /* COMPONENTES ESPECÍFICOS */
       .industrial-border {
-        border: 4px solid #1A1A1A;
-        box-shadow: 8px 8px 0px 0px #1A1A1A;
+        border: 4px solid var(--brand-black);
+        box-shadow: 8px 8px 0px 0px var(--brand-black);
       }
 
-      /* Scrollbar Industrial */
+      /* Scrollbar Industrial VERDE */
       ::-webkit-scrollbar { width: 12px; }
-      ::-webkit-scrollbar-track { background: #F1F1F1; }
-      ::-webkit-scrollbar-thumb { background: #1A1A1A; border: 3px solid #F1F1F1; }
+      ::-webkit-scrollbar-track { background: var(--green-900); }
+      ::-webkit-scrollbar-thumb { background: var(--brand-green); border: 3px solid var(--green-900); }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
     </style>
   <script type="importmap">
 {
@@ -73,9 +135,10 @@
   }
 }
 </script>
+<link rel="stylesheet" href="/index.css">
 </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+  <script type="module" src="/index.tsx"></script>
+</body>
 </html>

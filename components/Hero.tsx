@@ -9,12 +9,12 @@ export const Hero: React.FC = () => {
   const checklistItems = [
     { icon: Trophy, text: "+10 anos de mercado" },
     { icon: Package, text: "+10.000 itens disponíveis" },
-    { icon: Home, text: "Casa, obra e indústria" },
+    { icon: Home, text: "Do reparo simples à construção completa" },
     { icon: Handshake, text: "Atendimento especializado" },
   ];
 
   return (
-    <section className="relative min-h-[80vh] flex items-center pt-32 lg:pt-36 pb-16 overflow-hidden bg-white">
+    <section className="relative min-h-[80vh] flex items-center pt-32 lg:pt-36 pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 w-full">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
@@ -23,12 +23,12 @@ export const Hero: React.FC = () => {
             <div className="flex items-center gap-2 mb-6 bg-brand-black text-brand-green px-3 py-1.5 border-l-4 border-brand-green shadow-sm">
               <HardHat size={18} />
               <span className="font-black uppercase text-[10px] tracking-[0.2em]">
-                Santo Amaro • Varejo Técnico
+                Santo Amaro • Varejo Especializado
               </span>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-[900] text-brand-black leading-[1.1] mb-6 uppercase tracking-tighter">
-              Tudo para sua <span className="brush-highlight px-2 text-brand-black">casa</span>, obra e manutenção.
+              Tudo para sua <span className="brush-highlight px-2 text-brand-black">casa</span>, reforma e manutenção.
             </h1>
             
             <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg font-bold leading-tight border-l-8 border-brand-black pl-6 italic">
@@ -39,10 +39,10 @@ export const Hero: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 mb-10 w-full">
               {checklistItems.map((item, idx) => (
                 <div key={idx} className="flex items-center gap-3 group">
-                  <div className="bg-brand-green/10 p-2 rounded-sm group-hover:bg-brand-green transition-colors">
+                  <div className="p-2 rounded-sm bg-brand-green transition-colors">
                     <item.icon size={18} className="text-brand-black" />
                   </div>
-                  <span className="text-[11px] font-[900] uppercase tracking-wider text-brand-black">
+                  <span className="text-[11px] font-[700] uppercase tracking-wider text-white">
                     {item.text}
                   </span>
                 </div>
@@ -59,11 +59,11 @@ export const Hero: React.FC = () => {
                 Cotação WhatsApp
               </Button>
               
-              <div className="flex items-center gap-3 px-6 py-4 border-2 border-dashed border-gray-300 bg-gray-50">
+              <div className="flex items-center gap-3 px-6 py-4 border-2 border-dashed border-brand-green bg-black">
                 <ShieldCheck className="text-brand-green" size={24} />
                 <div>
-                  <p className="text-[9px] font-black uppercase text-gray-400 tracking-widest leading-none mb-1">Procedência</p>
-                  <p className="text-xs font-bold uppercase text-brand-black leading-none">Marcas Líderes</p>
+                  <p className="text-[9px] font-black uppercase text-gray-400 tracking-widest leading-none mb-1">Fornecedor <span className="text-bold">VERIFICADO!</span></p>
+                  <p className="text-xs font-bold uppercase text-white leading-none">Nota 4.9/5.0 no Google</p>
                 </div>
               </div>
             </div>
@@ -75,9 +75,9 @@ export const Hero: React.FC = () => {
               <div className="border-4 border-brand-black p-1 bg-white shadow-[12px_12px_0px_0px_rgba(135,212,75,1)]">
                 <div className="aspect-[4/5] lg:aspect-[3/4] overflow-hidden">
                   <img 
-                    src="/img/loja-materiais-construcao_(19).jpeg" 
+                    src="/img/loja-materiais-construcao_(13).jpeg" 
                     alt="Materiais de Construção Silvas" 
-                    className="w-full h-full object-cover grayscale brightness-95 contrast-110 hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover brightness-95 contrast-110 transition-all duration-700"
                   />
                 </div>
               </div>

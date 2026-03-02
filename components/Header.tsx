@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md border-b-2 border-brand-black py-3 shadow-lg' : 'bg-transparent py-8'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-black/95 backdrop-blur-md border-b-2 border-brand-black py-3 shadow-lg' : 'bg-transparent py-8'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo - Rigid & Technical */}
@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
                 Silvas <span className="text-white">&</span> Silvas
               </span>
             </div>
-            <div className="mt-1 text-[8px] font-black tracking-[0.2em] text-brand-black uppercase border-t border-brand-black pt-1 w-full">
+            <div className="mt-1 text-[8px] font-black tracking-[0.2em] text-white uppercase border-t pt-1 w-full text-center">
               Materiais de Construção
             </div>
           </div>
@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
               <button 
                 key={id}
                 onClick={() => scrollToSection(id)} 
-                className="text-brand-black font-black text-[10px] uppercase tracking-widest hover:text-brand-green transition-colors relative group"
+                className="text-white font-black text-[10px] uppercase tracking-widest hover:text-brand-green transition-colors relative group"
               >
                 {id === 'sobre' ? 'A Empresa' : id === 'categorias' ? 'Produtos' : 'Depoimentos'}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green group-hover:w-full transition-all"></span>
@@ -60,6 +60,13 @@ export const Header: React.FC = () => {
             
             <button 
               onClick={() => scrollToSection('contato')}
+              className="text-brand-black px-6 py-2.5 font-[900] uppercase text-[10px] bg-brand-green hover:text-brand-black transition-all border-2 border-brand-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5"
+            >
+              Lojas
+            </button>
+
+            <button 
+              onClick={() => scrollToSection('whatsapp-final')}
               className="bg-brand-black text-brand-green px-6 py-2.5 font-[900] uppercase text-[10px] hover:bg-brand-green hover:text-brand-black transition-all border-2 border-brand-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-0.5 active:translate-y-0.5"
             >
               Orçamento
@@ -80,7 +87,8 @@ export const Header: React.FC = () => {
           <button onClick={() => scrollToSection('sobre')} className="block w-full text-left font-black uppercase text-lg border-b border-gray-100 pb-2">A Empresa</button>
           <button onClick={() => scrollToSection('categorias')} className="block w-full text-left font-black uppercase text-lg border-b border-gray-100 pb-2">Produtos</button>
           <button onClick={() => scrollToSection('depoimentos')} className="block w-full text-left font-black uppercase text-lg border-b border-gray-100 pb-2">Depoimentos</button>
-          <button onClick={() => scrollToSection('contato')} className="w-full bg-brand-green text-brand-black py-4 font-black uppercase text-lg border-2 border-brand-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">WhatsApp</button>
+          <button onClick={() => scrollToSection('contato')} className="block w-full text-left font-black uppercase text-lg border-b border-gray-100 pb-2">Lojas</button>
+          <button onClick={() => scrollToSection('whatsapp-final')} className="w-full bg-brand-green text-brand-black py-4 font-black uppercase text-lg border-2 border-brand-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">Orçamento</button>
         </div>
       )}
     </header>

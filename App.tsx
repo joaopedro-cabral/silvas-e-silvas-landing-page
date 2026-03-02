@@ -12,7 +12,7 @@ import { FloatingCTA } from './components/FloatingCTA';
 
 const App: React.FC = () => {
   return (
-    <div className="font-sans antialiased text-brand-black bg-white min-h-screen flex flex-col">
+    <div className="font-sans antialiased text-brand-black bg-transparent min-h-screen flex flex-col">
       <Header />
       
       <main className="flex-grow">
@@ -26,7 +26,7 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
-      <FloatingCTA />
+      {/*<FloatingCTA />*/}
     </div>
   );
 };

@@ -1,31 +1,31 @@
 import React from 'react';
 import { COMPANY_INFO } from '../constants';
-import { History, Construction, Star, ShieldCheck } from 'lucide-react';
+import { History, Construction, Star, ShieldCheck, Package } from 'lucide-react';
 
 const HISTORY_GALLERY = [
-  { year: '2014', img: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop' },
-  { year: '2018', img: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2070&auto=format&fit=crop' },
-  { year: '2021', img: 'https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop' },
-  { year: 'HOJE', img: '/img/loja-materiais-construcao_(9).jpeg' }
+  { year: '2016', caption: 'Inicio da jornada', img: '/img/loja-materiais-santo-amaro.png' },
+  { year: '2019', caption: 'Instalação da 1º loja física', img: '/img/materiais-eletricos-santo-amaro.jpg' },
+  { year: '2022', caption: 'Instalação da 2º loja física', img: '/img/materiais-hidraulicos-santo-amaro.jpg' },
+  { year: 'HOJE', caption: 'Nova operação na Cerqueira Cesar, 31', img: '/img/materiais-reforma.jpg' }
 ];
 
 export const About: React.FC = () => {
   return (
-    <section id="sobre" className="py-24 bg-white border-b-8 border-brand-black">
+    <section id="sobre" className="py-24 bg-transparent border-b-8 border-brand-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="mb-16 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="flex items-center gap-3 text-brand-green mb-4">
               <History size={24} />
-              <span className="font-black uppercase tracking-[0.3em] text-[10px] text-brand-black">Nossa História</span>
+              <span className="font-black uppercase tracking-[0.3em] text-[10px] text-white">Nossa História</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-[900] text-brand-black uppercase tracking-tighter leading-tight">
-              Cimento e <br />
+              Honestidade e <br />
               <span className="brush-highlight px-4">Respeito.</span>
             </h2>
           </div>
           <p className="text-lg text-gray-700 font-bold border-l-4 border-brand-green pl-6 italic">
-            Somos uma empresa com mais de {COMPANY_INFO.yearsInBusiness} anos de atuação no mercado, oferecendo uma linha completa de produtos para casa, construção e manutenção. Trabalhamos com milhares de itens e temos como compromisso oferecer variedade, qualidade e atendimento de confiança aos nossos clientes.
+            A Silvas e Silvas nasceu há cerca de 10 anos como um negócio familiar. Desde o início, a empresa foi construída com base em relacionamento humano, confiança e conhecimento especializado no segmento. Ao longo dos anos, consolidou sua presença local, expandiu suas lojas físicas e ampliou seu portfólio para mais de 10 mil produtos.
           </p>
         </div>
 
@@ -43,6 +43,11 @@ export const About: React.FC = () => {
                   {item.year}
                 </span>
               </div>
+              <div className="absolute bottom-0 left-0 right-0 p-3 bg-brand-black/80 translate-y-0 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-300">
+                <p className="text-[10px] font-black text-white uppercase tracking-wider leading-tight">
+                  {item.caption}
+                </p>
+              </div>
             </div>
           ))}
         </div>
@@ -50,7 +55,7 @@ export const About: React.FC = () => {
         {/* Estatísticas Técnicas - Centralizadas */}
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-12 border-t-4 border-brand-black pt-16 justify-items-center">
             <div className="flex flex-col items-center text-center group max-w-[240px]">
-                <Construction className="text-brand-green mb-4 group-hover:scale-110 transition-transform" size={48} />
+                <Package className="text-brand-green mb-4 group-hover:scale-110 transition-transform" size={48} />
                 <div>
                   <h5 className="text-4xl font-[900] text-brand-black leading-none mb-2">+{COMPANY_INFO.productsCount}</h5>
                   <p className="text-[10px] font-black uppercase tracking-widest text-gray-500">Itens em nosso Catálogo</p>
@@ -72,7 +77,7 @@ export const About: React.FC = () => {
                 <ShieldCheck className="text-brand-green mb-4 group-hover:scale-110 transition-transform" size={48} />
                 <div>
                   <h5 className="text-2xl font-[900] text-brand-black leading-none mb-2 uppercase tracking-tighter">Confiança</h5>
-                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-500">Atendimento Técnico Especializado</p>
+                  <p className="text-[10px] font-black uppercase tracking-widest text-gray-500">Atendimento Especializado</p>
                 </div>
             </div>
         </div>

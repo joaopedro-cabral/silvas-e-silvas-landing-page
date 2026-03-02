@@ -29,7 +29,7 @@ export const Categories: React.FC = () => {
               <span className="font-black uppercase tracking-[0.3em] text-[10px]">Catálogo Técnico</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-[900] uppercase tracking-tighter leading-tight">
-              Tudo o que você <br /><span className="text-brand-green">precisa</span>.
+              Tudo <br /><span className="text-brand-green">em um só lugar!</span>.
             </h2>
           </div>
           <div className="hidden md:block h-1 w-24 bg-brand-green mb-3"></div>

@@ -9,14 +9,14 @@ export const Testimonials: React.FC = () => {
         
         <div className="flex flex-col md:flex-row items-center justify-between mb-20 gap-8">
             <div className="text-center md:text-left">
-                <h2 className="text-5xl md:text-7xl font-[900] text-brand-black uppercase tracking-tighter leading-none mb-6">
+                <h2 className="text-5xl md:text-7xl font-[900] text-white uppercase tracking-tighter leading-none mb-6">
                   Avaliações no <br /><span className="text-[#4285F4]">G</span><span className="text-[#EA4335]">o</span><span className="text-[#FBBC05]">o</span><span className="text-[#4285F4]">g</span><span className="text-[#34A853]">l</span><span className="text-[#EA4335]">e</span>
                 </h2>
                 <div className="flex items-center justify-center md:justify-start gap-4">
                     <div className="flex text-[#FBBC05]">
                         {[...Array(5)].map((_, i) => <Star key={i} size={24} fill="#FBBC05" />)}
                     </div>
-                    <span className="text-brand-black font-black text-xl">4.9 / 5.0</span>
+                    <span className="text-white font-black text-xl">4.9 / 5.0</span>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@ export const Testimonials: React.FC = () => {
               </div>
               
               {/* Content */}
-              <p className="text-gray-700 text-sm leading-relaxed mb-8 flex-grow">
+              <p className="text-brand-black text-sm leading-relaxed mb-8 flex-grow">
                 "{t.content}"
               </p>
 
@@ -72,7 +72,7 @@ export const Testimonials: React.FC = () => {
               target="_blank" 
               className="inline-flex items-center gap-3 bg-white border-4 border-brand-black px-10 py-5 font-black uppercase text-xs tracking-widest hover:bg-brand-black hover:text-white transition-all shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:shadow-none"
             >
-              Ver Todas as Avaliações no Google
+              FAÇA TAMBÉM A SUA AVALIAÇÃO NO GOOGLE!
             </a>
         </div>
       </div>

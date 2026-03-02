@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
                 </span>
             </div>
             <p className="text-gray-400 font-bold uppercase text-[10px] tracking-widest leading-relaxed mb-8">
-                Referência em Santo Amaro para materiais elétricos, hidráulicos e ferramentas. Atendimento técnico especializado.
+                REFERÊNCIA EM SANTO AMARO PARA MATERIAIS DE CONSTRUÇÃO, ELÉTRICOS, HIDRÁULICOS E FERRAMENTAS. ATENDIMENTO ESPECIALIZADO.
             </p>
           </div>
 
