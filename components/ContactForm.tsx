@@ -26,9 +26,9 @@ export const ContactForm: React.FC = () => {
                 {/* Imagem da Fachada Menor */}
                 <div className="w-full sm:w-32 h-32 flex-shrink-0 overflow-hidden border-2 border-white/10 bg-brand-black">
                   <img 
-                    src={(store as any).image} 
+                    src={store.image} 
                     alt={`Fachada ${store.name}`} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover group-hover:grayscale-0 transition-all duration-500"
                     referrerPolicy="no-referrer"
                   />
                 </div>

@@ -20,7 +20,7 @@ export const Hero: React.FC = () => {
           
           {/* Coluna Texto - Foco em Conversão e Equilíbrio */}
           <div className="lg:col-span-7 flex flex-col items-start z-20">
-            <div className="flex items-center gap-2 mb-6 bg-brand-black text-brand-green px-3 py-1.5 border-l-4 border-brand-green shadow-sm">
+            <div className="flex items-center gap-2 mb-6 bg-white/95 text-brand-black px-3 py-1.5 border-l-4 border-brand-green shadow-sm">
               <HardHat size={18} />
               <span className="font-black uppercase text-[10px] tracking-[0.2em]">
                 Santo Amaro • Varejo Especializado
@@ -28,10 +28,10 @@ export const Hero: React.FC = () => {
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-[900] text-brand-black leading-[1.1] mb-6 uppercase tracking-tighter">
-              Tudo para sua <span className="brush-highlight px-2 text-brand-black">casa</span>, reforma e manutenção.
+              Tudo para sua <span className="brush-highlight px-2 text-white">casa</span>, reforma e manutenção.
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg font-bold leading-tight border-l-8 border-brand-black pl-6 italic">
+            <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg font-bold leading-tight border-l-8 border-white pl-6 italic">
               {content.subhead}
             </p>
 

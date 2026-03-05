@@ -16,14 +16,16 @@ export const STORES = [
     address: "R. Cerqueira César, 31 - Santo Amaro, São Paulo - SP, 04750-080",
     mapLink: "https://www.google.com/maps/place/Silvas+e+Silvas+Casa+e+Constru%C3%A7%C3%A3o/@-23.6496129,-46.7066609,17z/data=!3m1!5s0x94ce505585648ce5:0xe47848b4ddc1b562!4m15!1m8!3m7!1s0x94ce505581b4ff2d:0xa209300e3fdd414c!2sR.+Cerqueira+C%C3%A9sar,+31+-+Santo+Amaro,+S%C3%A3o+Paulo+-+SP,+04750-080!3b1!8m2!3d-23.6496129!4d-46.7066609!16s%2Fg%2F11crs2012r!3m5!1s0x94ce51f5a18fb65b:0x8b1acb39027a6cf1!8m2!3d-23.6496129!4d-46.7066609!16s%2Fg%2F11p3jkywnp?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D",
     embedMap: "https://maps.google.com/maps?q=R.%20Cerqueira%20César,%2031%20-%20Santo%20Amaro&t=&z=15&ie=UTF8&iwloc=&output=embed",
-    feature: "COM ESTACIONAMENTO EXCLUSIVO PARA CLIENTE."
+    feature: "COM ESTACIONAMENTO EXCLUSIVO PARA CLIENTE.",
+    image: "/img/materiais-reforma.jpg"
   },
   {
     id: 2,
     name: "Unidade Desembargador",
     address: "Rua Desembargador Bandeira de Mello, 94 - Santo Amaro, São Paulo - SP, 04743-000",
     mapLink: "https://www.google.com/maps/place/Silvas+e+Silvas+II+-+Casa+%7C+Constru%C3%A7%C3%A3o+%7C+El%C3%A9trica+%7C+Hidr%C3%A1ulica/@-23.6543345,-46.7059172,17z/data=!4m15!1m8!3m7!1s0x94ce50538e8dec1d:0x7509ed5c1507172a!2sRua+Desembargador+Bandeira+de+Mello,+94+-+Santo+Amaro,+S%C3%A3o+Paulo+-+SP,+04743-000!3b1!8m2!3d-23.6543345!4d-46.7059172!16s%2Fg%2F11c5m5pzm9!3m5!1s0x94ce5137d2dc6f63:0x92d516030551e92d!8m2!3d-23.6543345!4d-46.7059172!16s%2Fg%2F11jsksj4rx?entry=ttu&g_ep=EgoyMDI2MDIxMS4wIKXMDSoASAFQAw%3D%3D",
-    embedMap: "https://maps.google.com/maps?q=Rua%20Desembargador%20Bandeira%20de%20Mello,%2094%20-%20Santo%20Amaro&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    embedMap: "https://maps.google.com/maps?q=Rua%20Desembargador%20Bandeira%20de%20Mello,%2094%20-%20Santo%20Amaro&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    image: "/img/material-construcao-loja-reforma.png"
   }
 ];
 

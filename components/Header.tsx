@@ -31,17 +31,17 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-brand-black/95 backdrop-blur-md border-b-2 border-brand-black py-3 shadow-lg' : 'bg-transparent py-8'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md border-b-2 border-brand-black py-3 shadow-lg' : 'bg-white/95 py-8'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo - Rigid & Technical */}
           <div className="flex flex-col items-start cursor-pointer group" onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
             <div className="brush-highlight px-3 py-0.5">
               <span className="text-2xl font-[900] text-brand-black uppercase tracking-tighter block leading-none">
-                Silvas <span className="text-white">&</span> Silvas
+                Silvas <span className="text-brand-black">&</span> Silvas
               </span>
             </div>
-            <div className="mt-1 text-[8px] font-black tracking-[0.2em] text-white uppercase border-t pt-1 w-full text-center">
+            <div className="mt-1 text-[8px] font-black tracking-[0.2em] text-brand-black uppercase border-t pt-1 w-full text-center">
               Materiais de Construção
             </div>
           </div>
@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
               <button 
                 key={id}
                 onClick={() => scrollToSection(id)} 
-                className="text-white font-black text-[10px] uppercase tracking-widest hover:text-brand-green transition-colors relative group"
+                className="text-brand-black font-black text-[10px] uppercase tracking-widest hover:text-brand-green transition-colors relative group"
               >
                 {id === 'sobre' ? 'A Empresa' : id === 'categorias' ? 'Produtos' : 'Depoimentos'}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-green group-hover:w-full transition-all"></span>

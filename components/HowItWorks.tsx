@@ -6,7 +6,7 @@ export const HowItWorks: React.FC = () => {
     <section className="py-24 bg-transparent border-y-8 border-brand-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-7xl font-[900] text-brand-black uppercase tracking-tighter leading-none">
+          <h2 className="text-5xl md:text-7xl font-[900] text-white uppercase tracking-tighter leading-none">
             Compra <span className="brush-highlight px-6">Rápida</span>
           </h2>
           <p className="mt-6 text-gray-800 font-bold uppercase tracking-widest text-sm">Sem burocracia, direto ao ponto!</p>

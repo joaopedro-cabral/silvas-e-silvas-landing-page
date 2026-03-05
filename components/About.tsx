@@ -19,7 +19,7 @@ export const About: React.FC = () => {
               <History size={24} />
               <span className="font-black uppercase tracking-[0.3em] text-[10px] text-white">Nossa História</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-[900] text-brand-black uppercase tracking-tighter leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-[900] text-white uppercase tracking-tighter leading-tight">
               Honestidade e <br />
               <span className="brush-highlight px-4">Respeito.</span>
             </h2>
