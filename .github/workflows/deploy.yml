@@ -1,0 +1,38 @@
+name: Deploy para Hostinger
+
+on:
+  push:
+    branches:
+      - main # ou a sua branch principal (mude para 'master' se for o caso)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Pegando o código
+        uses: actions/checkout@v3
+
+      - name: 🟢 Configurando Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Versão estável do Node
+
+      - name: 📦 Instalando dependências
+        run: npm install
+
+      - name: 🏗️ Fazendo o Build (TypeScript -> JS)
+        run: npm run build
+
+      - name: 🚀 Subindo para a Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # IMPORTANTE: Verifique se sua pasta de saída é 'dist', 'out' ou 'build'
+          local-dir: ./dist/ 
+          # Se for na pasta principal, deixe /public_html/
+          server-dir: /public_html/ 
+          # Isso evita apagar arquivos do WordPress se estiverem na mesma pasta
+          delete-destination-prevent-alloct: true
