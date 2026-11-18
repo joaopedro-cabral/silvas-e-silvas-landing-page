@@ -1,0 +1,173 @@
+.electrical-page {
+  --electric-lime: var(--brand-green, #87d44b);
+  --electric-ink: var(--brand-black, #1a1a1a);
+  --electric-blue: #070b45;
+  color: #fff;
+}
+.electric-container { width: min(100% - 64px, 1216px); margin-inline: auto; }
+.electric-hero { padding: 150px 0 80px; }
+.electric-breadcrumb { display: flex; gap: 12px; align-items: center; margin-bottom: 42px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: #c0cee1; }
+.electric-breadcrumb a:hover { color: var(--electric-lime); }
+.electric-hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 58px; align-items: center; }
+.electric-eyebrow { display: flex; gap: 8px; align-items: center; font-size: 10px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; }
+.electric-hero .electric-eyebrow { color: var(--electric-lime); margin-bottom: 22px; }
+.electric-hero h1 { font-size: clamp(42px, 4.7vw, 65px); font-weight: 900; line-height: 1.05; letter-spacing: -.055em; text-transform: uppercase; margin: 0 0 25px; }
+.electric-hero h1 .brush-highlight { padding-inline: 5px; }
+.electric-intro { color: #d1deed; font-size: 16px; line-height: 1.7; max-width: 450px; }
+.electric-hero-deadlines { display: flex; flex-wrap: wrap; gap: 12px 22px; margin-top: 23px; font-size: 11px; }
+.electric-hero-deadlines > span { display: inline-flex; gap: 6px; align-items: center; }
+.electric-hero-deadlines svg, .electric-hero-deadlines strong { color: var(--electric-lime); }
+.electric-hero-cutoff { color: #c0cee1; font-size: 9px; margin-top: 8px; }
+.electric-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 30px; }
+.electric-button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 56px; padding: 17px 23px; background: var(--electric-lime); color: var(--electric-ink); border: 2px solid var(--electric-ink); box-shadow: 5px 5px 0 var(--electric-ink); font-size: 12px; font-weight: 900; letter-spacing: .015em; text-transform: uppercase; transition: transform .18s, box-shadow .18s, background .18s; }
+.electric-button:hover { background: #a3eb6c; transform: translate(2px, 2px); box-shadow: 3px 3px 0 var(--electric-ink); }
+.electric-text-link { display: inline-flex; align-items: center; gap: 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; padding-block: 12px; border-bottom: 1px solid #ffffff50; }
+.electric-text-link:hover { color: var(--electric-lime); border-color: var(--electric-lime); }
+.electric-hero-note { display: flex; gap: 8px; align-items: center; margin-top: 23px; color: #c0cee1; font-size: 10px; }
+.electric-hero-note svg { color: var(--electric-lime); flex-shrink: 0; }
+.electric-showcase { position: relative; border: 3px solid var(--electric-ink); box-shadow: 12px 12px 0 var(--electric-lime); background: #f6f6f5; color: var(--electric-ink); transform: rotate(-1deg); }
+.electric-showcase-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; border-bottom: 1px solid #d9dcdc; }
+.electric-showcase-top > span { display: inline-flex; gap: 8px; align-items: center; font-size: 9px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.electric-showcase-top img { width: 87px; height: 35px; object-fit: contain; }
+.electric-showcase-image { height: 285px; position: relative; overflow: hidden; background: #e4e4e4; }
+.electric-showcase-image > img { width: 100%; height: 100%; object-fit: cover; object-position: 46% center; }
+.electric-product-caption { position: absolute; bottom: 17px; left: 20px; padding: 7px 10px; background: #ffffffed; font-size: 8px; font-weight: 900; text-transform: uppercase; letter-spacing: .1em; }
+.electric-showcase-bottom { display: flex; gap: 12px; align-items: center; padding: 20px 24px; border-top: 2px solid var(--electric-ink); }
+.electric-quality-mark { background: var(--electric-lime); width: 43px; height: 43px; display: grid; place-items: center; }
+.electric-showcase-bottom strong { display: block; font-size: 18px; font-weight: 900; letter-spacing: -.03em; text-transform: uppercase; }
+.electric-showcase-bottom div > span { display: block; font-size: 10px; margin-top: 2px; color: #4b5260; }
+.electric-showcase-number { margin-left: auto; font-size: 36px; font-weight: 900; color: #d1d7d1; letter-spacing: -.07em; }
+.electric-showcase-tab { position: absolute; bottom: -20px; right: 15px; display: flex; align-items: center; gap: 7px; background: var(--electric-ink); color: var(--electric-lime); padding: 10px 15px; font-size: 8px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; transform: rotate(1deg); }
+.electric-service { background: var(--electric-ink); border-top: 5px solid var(--electric-lime); padding: 40px 0 23px; }
+.electric-service-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.electric-service-option { display: flex; gap: 22px; align-items: flex-start; padding: 4px 40px 15px 0; }
+.electric-service-option + .electric-service-option { border-left: 1px solid #ffffff29; padding-left: 55px; padding-right: 0; }
+.electric-service-option > svg { color: var(--electric-lime); margin-top: 3px; flex-shrink: 0; }
+.electric-service .electric-eyebrow { color: var(--electric-lime); font-size: 9px; }
+.electric-service h2 { font-size: 27px; font-weight: 700; letter-spacing: -.05em; line-height: 1.5; margin: 9px 0 0; }
+.electric-service h2 strong { font-size: 57px; font-weight: 900; line-height: 1; }
+.electric-service h2 > span { font-size: 15px; vertical-align: super; color: var(--electric-lime); }
+.electric-service-option div > p:not(.electric-eyebrow) { color: #c6cace; font-size: 12px; line-height: 1.6; }
+.electric-service-option a { display: inline-flex; align-items: center; gap: 20px; color: var(--electric-lime); font-size: 10px; font-weight: 900; text-transform: uppercase; border-bottom: 1px solid #87d44b60; margin-top: 18px; padding-bottom: 7px; }
+.electric-service-option a:hover { color: #fff; }
+.electric-service-terms { width: min(100% - 64px, 1216px); margin: 23px auto 0; border-top: 1px solid #ffffff19; padding-top: 17px; font-size: 9px; color: #b4b9bf; line-height: 1.6; }
+.electric-catalog { background: #f3f4ef; color: var(--electric-ink); padding: 77px 0 45px; border-bottom: 6px solid var(--electric-ink); }
+.electric-section-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 35px; }
+.electric-catalog .electric-eyebrow { color: #476230; }
+.electric-section-heading h2 { font-size: clamp(32px, 3.4vw, 46px); font-weight: 900; line-height: 1.03; letter-spacing: -.055em; text-transform: uppercase; margin-top: 16px; }
+.electric-section-heading h2 span { color: #52614e; }
+.electric-section-heading > p { font-size: 12px; line-height: 1.8; max-width: 300px; color: #51564e; border-left: 3px solid var(--electric-lime); padding-left: 16px; }
+.electric-product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 17px; }
+.electric-product-card { border: 2px solid #20251e; background: #fff; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; }
+.electric-product-card:hover { transform: translateY(-4px); box-shadow: 4px 4px 0 var(--electric-lime); }
+.electric-card-image { position: relative; height: 176px; padding: 28px 14px 5px; border-bottom: 1px solid #e6e8e1; background: #fff; display: grid; place-items: center; overflow: hidden; }
+.electric-card-image img { width: 100%; height: 136px; object-fit: contain; }
+.electric-card-index { position: absolute; top: 12px; left: 14px; font-size: 9px; font-weight: 900; color: #667060; }
+.electric-card-copy { padding: 21px 20px 19px; display: flex; flex-direction: column; flex: 1; }
+.electric-card-label { color: #435c30; font-size: 8px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+.electric-card-copy h3 { font-size: 20px; font-weight: 900; line-height: 1.1; letter-spacing: -.045em; text-transform: uppercase; margin: 10px 0 12px; }
+.electric-card-copy > p { font-size: 11px; line-height: 1.8; color: #565c53; margin-bottom: 24px; }
+.electric-card-copy a { margin-top: auto; padding-top: 14px; border-top: 2px solid var(--electric-lime); display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 9px; font-weight: 900; text-transform: uppercase; }
+.electric-card-copy a:hover { color: #426320; }
+.electric-catalog-note { font-size: 9px; color: #626a5d; margin-top: 20px; line-height: 1.6; }
+.electric-order { padding: 80px 0 45px; background: #060d39aa; }
+.electric-order-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 85px; align-items: center; }
+.electric-order .electric-eyebrow { color: var(--electric-lime); }
+.electric-order h2 { font-size: clamp(36px, 3.8vw, 51px); font-weight: 900; text-transform: uppercase; letter-spacing: -.055em; line-height: 1.04; margin: 20px 0; }
+.electric-order h2 span { color: var(--electric-lime); }
+.electric-order-intro { max-width: 390px; color: #c1cfe0; font-size: 13px; line-height: 1.9; margin-bottom: 26px; }
+.electric-steps { list-style: none; margin: 0; padding: 0; }
+.electric-steps li { display: flex; gap: 18px; align-items: flex-start; padding: 24px 0; border-top: 1px solid #ffffff30; }
+.electric-steps li:last-child { border-bottom: 1px solid #ffffff30; }
+.electric-step-number { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border: 1px solid var(--electric-lime); color: var(--electric-lime); font-size: 15px; font-weight: 900; }
+.electric-steps h3 { font-size: 16px; font-weight: 900; margin-bottom: 8px; letter-spacing: -.03em; }
+.electric-steps p { font-size: 12px; line-height: 1.8; color: #c1cfe0; }
+.electric-steps li > svg { flex-shrink: 0; color: var(--electric-lime); margin-top: 4px; }
+.electric-region { margin-top: 62px; padding-top: 28px; border-top: 1px solid #ffffff30; }
+.electric-region-heading { display: flex; gap: 9px; align-items: center; color: var(--electric-lime); }
+.electric-region-heading h3 { font-size: 18px; font-weight: 900; letter-spacing: -.03em; color: #fff; }
+.electric-region > p:not(.electric-order-terms) { color: #c1cfe0; font-size: 11px; line-height: 1.7; margin-top: 9px; }
+.electric-neighborhoods { display: flex; flex-wrap: wrap; gap: 9px; list-style: none; margin: 20px 0; padding: 0; }
+.electric-neighborhoods li { padding: 9px 13px; border: 1px solid #ffffff30; font-size: 10px; font-weight: 700; }
+.electric-pickup-stores { display: flex; flex-wrap: wrap; gap: 10px 23px; align-items: center; font-size: 10px; padding-top: 12px; }
+.electric-pickup-stores > span { color: #c1cfe0; }
+.electric-pickup-stores a { display: inline-flex; gap: 6px; align-items: center; font-weight: 700; border-bottom: 1px solid #87d44b60; padding-bottom: 3px; color: var(--electric-lime); }
+.electric-order-terms { margin-top: 25px; color: #afc0d5; font-size: 9px; line-height: 1.9; max-width: 900px; }
+.electric-mobile-cta { display: none; }
+.electrical-page a:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
+@media (max-width: 1100px) {
+  .electric-hero-grid { gap: 36px; }
+  .electric-hero-actions { gap: 15px; }
+  .electric-hero h1 { font-size: 49px; }
+  .electric-showcase-image { height: 260px; }
+  .electric-showcase-top { padding: 17px; }
+  .electric-order-grid { gap: 45px; }
+  .electric-card-copy { padding-inline: 16px; }
+  .electric-card-copy h3 { font-size: 18px; }
+}
+@media (max-width: 767px) {
+  .electric-container { width: min(100% - 40px, 600px); }
+  .electric-hero { padding: 141px 0 58px; }
+  .electric-breadcrumb { margin-bottom: 31px; font-size: 8px; }
+  .electric-hero-grid { grid-template-columns: 1fr; gap: 39px; }
+  .electric-hero h1 { font-size: clamp(37px, 8.7vw, 54px); line-height: 1.07; letter-spacing: -.055em; }
+  .electric-hero .electric-eyebrow { margin-bottom: 18px; font-size: 9px; }
+  .electric-intro { font-size: 14px; line-height: 1.8; }
+  .electric-hero-actions { margin-top: 24px; flex-direction: column; align-items: stretch; gap: 9px; }
+  .electric-hero-actions .electric-text-link { align-self: center; }
+  .electric-button { padding: 16px 18px; gap: 10px; font-size: 11px; }
+  .electric-hero-note { margin-top: 17px; font-size: 9px; }
+  .electric-showcase { margin-right: 8px; box-shadow: 8px 8px 0 var(--electric-lime); }
+  .electric-showcase-image { height: 215px; }
+  .electric-showcase-top { padding: 16px; }
+  .electric-showcase-top > span { font-size: 8px; gap: 6px; }
+  .electric-showcase-top img { width: 70px; height: 30px; }
+  .electric-showcase-bottom { padding: 16px; gap: 10px; }
+  .electric-showcase-bottom strong { font-size: 17px; }
+  .electric-showcase-bottom div > span { font-size: 9px; }
+  .electric-showcase-tab { font-size: 7px; right: 9px; }
+  .electric-service { padding: 26px 0 20px; }
+  .electric-service-grid { grid-template-columns: 1fr; }
+  .electric-service-option { padding: 8px 0 25px; gap: 18px; }
+  .electric-service-option + .electric-service-option { border-left: 0; border-top: 1px solid #ffffff29; padding: 27px 0 7px; }
+  .electric-service h2 { font-size: 24px; }
+  .electric-service h2 strong { font-size: 49px; }
+  .electric-service-terms { width: calc(100% - 40px); font-size: 9px; }
+  .electric-catalog { padding: 48px 0 30px; }
+  .electric-section-heading { display: block; margin-bottom: 28px; }
+  .electric-section-heading .electric-eyebrow { font-size: 8px; letter-spacing: .11em; }
+  .electric-section-heading h2 { font-size: 37px; margin-top: 16px; }
+  .electric-section-heading > p { margin-top: 20px; font-size: 11px; }
+  .electric-product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .electric-card-image { height: 125px; padding: 24px 7px 4px; }
+  .electric-card-image img { height: 90px; }
+  .electric-card-copy { padding: 16px 12px 13px; }
+  .electric-card-copy h3 { font-size: 17px; margin-bottom: 10px; }
+  .electric-card-copy > p { font-size: 10px; line-height: 1.7; margin-bottom: 19px; }
+  .electric-card-copy a { font-size: 8px; gap: 4px; }
+  .electric-card-copy a svg { width: 15px; flex-shrink: 0; }
+  .electric-card-label { font-size: 7px; letter-spacing: .08em; }
+  .electric-catalog-note { font-size: 8px; }
+  .electric-order { padding: 46px 0 33px; }
+  .electric-order-grid { grid-template-columns: 1fr; gap: 33px; }
+  .electric-order h2 { font-size: 40px; }
+  .electric-order-intro { font-size: 12px; }
+  .electric-order .electric-button { width: 100%; }
+  .electric-steps li { gap: 13px; padding-block: 21px; }
+  .electric-steps h3 { font-size: 15px; }
+  .electric-steps p { font-size: 11px; }
+  .electric-steps li > svg { width: 19px; }
+  .electric-step-number { width: 34px; height: 34px; font-size: 12px; }
+  .electric-region { margin-top: 35px; }
+  .electric-neighborhoods { gap: 7px; }
+  .electric-neighborhoods li { font-size: 9px; padding: 8px 10px; }
+  .electric-pickup-stores { gap: 13px 20px; }
+  .electric-pickup-stores > span { width: 100%; }
+  .electric-mobile-cta { display: block; position: fixed; z-index: 40; bottom: 0; left: 0; right: 0; padding: 10px 18px calc(10px + env(safe-area-inset-bottom)); background: #080d2ff5; border-top: 1px solid #ffffff30; }
+  .electric-mobile-cta .electric-button { width: 100%; min-height: 49px; padding-block: 12px; box-shadow: none; }
+  body:has(.electrical-page) footer { padding-bottom: 120px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .electric-button, .electric-product-card { transition: none; }
+  .electric-button:hover, .electric-product-card:hover { transform: none; }
+}

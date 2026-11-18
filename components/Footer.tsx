@@ -23,8 +23,9 @@ export const Footer: React.FC = () => {
                 <h5 className="text-brand-green font-black uppercase text-[10px] tracking-widest mb-6 text-opacity-80">Navegação</h5>
                 <ul className="space-y-3">
                    {['Sobre', 'Categorias', 'Depoimentos'].map(item => (
-                     <li key={item}><a href={`#${item.toLowerCase()}`} className="text-white/40 hover:text-brand-green text-[10px] font-black uppercase tracking-tight transition-colors">{item}</a></li>
+                     <li key={item}><a href={`/#${item.toLowerCase()}`} className="text-white/40 hover:text-brand-green text-[10px] font-black uppercase tracking-tight transition-colors">{item}</a></li>
                    ))}
+                   <li><a href="/produtos-eletricos" className="text-brand-green text-[10px] font-black uppercase tracking-tight hover:underline">Produtos elétricos</a></li>
                 </ul>
              </div>
              <div>

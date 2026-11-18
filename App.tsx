@@ -8,14 +8,17 @@ import { HowItWorks } from './components/HowItWorks';
 import { Testimonials } from './components/Testimonials';
 import { ContactForm } from './components/ContactForm';
 import { Footer } from './components/Footer';
-import { FloatingCTA } from './components/FloatingCTA';
+import { ElectricalProducts } from './pages/ElectricalProducts';
 
 const App: React.FC = () => {
+  const isElectricalPage = /^\/produtos-eletricos(?:\/index\.html)?\/?$/.test(window.location.pathname);
+
   return (
     <div className="font-sans antialiased text-brand-black bg-transparent min-h-screen flex flex-col">
-      <Header />
+      <Header isElectricalPage={isElectricalPage} />
       
-      <main className="flex-grow">
+      <main id="conteudo" className="flex-grow">
+        {isElectricalPage ? <ElectricalProducts /> : <>
         <Hero />
         <Brands />
         <Categories />
@@ -23,10 +26,10 @@ const App: React.FC = () => {
         <HowItWorks />
         <Testimonials />
         <ContactForm />
+        </>}
       </main>
 
       <Footer />
-      {/*<FloatingCTA />*/}
     </div>
   );
 };
