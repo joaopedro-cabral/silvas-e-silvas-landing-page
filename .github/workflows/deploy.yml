@@ -3,7 +3,7 @@ name: Deploy para Hostinger
 on:
   push:
     branches:
-      - main # ou a sua branch principal (mude para 'master' se for o caso)
+      - main
 
 jobs:
   build-and-deploy:
@@ -16,10 +16,14 @@ jobs:
       - name: 🟢 Configurando Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Versão estável do Node
+          node-version: '22'
+          cache: npm
 
       - name: 📦 Instalando dependências
-        run: npm install
+        run: npm ci
+
+      - name: 🔎 Verificando TypeScript
+        run: npx tsc --noEmit
 
       - name: 🏗️ Fazendo o Build (TypeScript -> JS)
         run: npm run build
@@ -30,9 +34,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # IMPORTANTE: Verifique se sua pasta de saída é 'dist', 'out' ou 'build'
-          local-dir: ./dist/ 
-          # Se for na pasta principal, deixe /public_html/
-          server-dir: /public_html/ 
-          # Isso evita apagar arquivos do WordPress se estiverem na mesma pasta
-          delete-destination-prevent-alloct: true
+          local-dir: ./dist/
+          server-dir: /public_html/
+          # Não executar a limpeza completa do diretório de destino.
+          dangerous-clean-slate: false
